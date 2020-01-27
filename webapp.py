@@ -24,12 +24,12 @@ def startOver():
 
 @app.route('/page1')
 def renderPage1():
+    session["last_name"] = request.form["lastName"]
     return render_template('page1.html')
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: save the first and last name in the session
-    session["first_name"] = request.form["firstName"]
     session["last_name"] = request.form["lastName"]
     return render_template('page2.html')
 
