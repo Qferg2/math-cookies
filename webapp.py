@@ -22,7 +22,7 @@ def startOver():
     session.clear()
     return redirect('/')
 
-@app.route('/page1')
+@app.route('/page1',methods=['GET','POST'])
 def renderPage1():
     session["Sum"] = request.form["sum"]
     return render_template('page1.html')
