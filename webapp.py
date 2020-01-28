@@ -40,7 +40,7 @@ def renderPage3():
     return render_template('page3.html')
   
 @app.route('/page4',methods=['GET','POST'])
-def renderPage2():
+def renderPage4():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
     return render_template('page4.html')
