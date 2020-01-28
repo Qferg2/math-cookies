@@ -1,17 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 1: Name{% endblock %}
+{% block title %}Addition{% endblock %}
 
 {% block content %}
-  <h1>Page 1: What is your name?</h1>
+  <h1>Solve the problem.</h1>
 
  <form action="/page2" method="POST">
-  First name:<br>
-  <input type="text" name="firstName">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastName">
-  <input type="submit" value="Submit">
+  10 + 5:<br>
+  <input type="text" name="sum">
+  <br/>
  </form> 
 
 
