@@ -28,19 +28,19 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    #TODO: Subtraction
+    #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
     return render_template('page2.html')
   
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    #TODO: Multiplication 
+    #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
     return render_template('page3.html')
   
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
-    #TODO: Division 
+    #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
     return render_template('page4.html')
 
