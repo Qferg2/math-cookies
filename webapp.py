@@ -24,13 +24,14 @@ def startOver():
 
 @app.route('/page1')
 def renderPage1():
+    
     return render_template('page1.html')
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
-    return render_template('page2.html')
+    session["sum"] = request.form["sum"]
   
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
@@ -48,11 +49,11 @@ def renderPage4():
 def renderPage5():
     #TODO: save the favorite color in the session
     #session["favorite_color"] = request.form["favoriteColor"]
-    if session[sum] == 15:
-        response = "YAY"
-    else
-        response = "OOPS"
+    if session["sum"] == 15:
+        AdAnswer = "YAY"
+    else:
+        AdAnswer = "OOPS"
     return render_template('page5.html')
     
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
