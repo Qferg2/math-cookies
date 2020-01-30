@@ -49,10 +49,17 @@ def renderPage4():
 def renderPage5():
     #TODO: save the favorite color in the session
     #session["favorite_color"] = request.form["favoriteColor"]
+
+    if session[sum] == 15:
+        response = "YAY"
+    else:
+        response = "OOPS"
+
     if session["sum"] == 15:
         AdAnswer = "YAY"
     else:
         AdAnswer = "OOPS"
+
     return render_template('page5.html')
     
 if __name__=="__main__":
