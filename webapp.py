@@ -37,30 +37,42 @@ def renderPage2():
 def renderPage3():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
+    session["answer"] = request.form["answer"]
     return render_template('page3.html')
   
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
+    session["total"] = request.form["total"]
     return render_template('page4.html')
 
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
     #TODO: save the favorite color in the session
     #session["favorite_color"] = request.form["favoriteColor"]
-
-    if session[sum] == 15:
-        response = "YAY"
+    session["results"] = request.form["results"]
+    
+    if session["sum"] == "15":
+        AdAnswer = "Correct"
     else:
-        response = "OOPS"
-
-    if session["sum"] == 15:
-        AdAnswer = "YAY"
+        AdAnswer = "Incorrect"
+    
+    if session["answer"] == "27":
+        SubAnswer = "Correct"
     else:
-        AdAnswer = "OOPS"
-
-    return render_template('page5.html')
+        SubAnswer = "Incorrect"
+    
+    if session["total"] == "126":
+        MultAnswer = "Correct"
+    else:
+        MultAnswer = "Incorrect"
+    
+    if session["results"] == "32":
+        DivAnswer = "Correct"
+    else:
+        DivAnswer = "Incorrect"
+    return render_template('page5.html', AdAnswer = AdAnswer, SubAnswer = SubAnswer, MultAnswer = MultAnswer, DivAnswer = DivAnswer)
     
 if __name__=="__main__":
     app.run(debug=True)
