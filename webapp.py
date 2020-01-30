@@ -50,7 +50,7 @@ def renderPage5():
     #session["favorite_color"] = request.form["favoriteColor"]
     if session[sum] == 15:
         response = "YAY"
-    else
+    else:
         response = "OOPS"
     return render_template('page5.html')
     
