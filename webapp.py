@@ -53,26 +53,33 @@ def renderPage5():
     #session["favorite_color"] = request.form["favoriteColor"]
     session["results"] = request.form["results"]
     
+    score = 0
+    
     if session["sum"] == "15":
         AdAnswer = "Correct"
+        score = score + 1
     else:
         AdAnswer = "Incorrect"
     
     if session["answer"] == "27":
         SubAnswer = "Correct"
+        score = score + 1
     else:
         SubAnswer = "Incorrect"
     
     if session["total"] == "126":
         MultAnswer = "Correct"
+        score = score + 1
     else:
         MultAnswer = "Incorrect"
     
     if session["results"] == "32":
         DivAnswer = "Correct"
+        score = score + 1
     else:
         DivAnswer = "Incorrect"
-    return render_template('page5.html', AdAnswer = AdAnswer, SubAnswer = SubAnswer, MultAnswer = MultAnswer, DivAnswer = DivAnswer)
+        
+    return render_template('page5.html', AdAnswer = AdAnswer, SubAnswer = SubAnswer, MultAnswer = MultAnswer, DivAnswer = DivAnswer, Score = score)
     
 if __name__=="__main__":
     app.run(debug=True)
