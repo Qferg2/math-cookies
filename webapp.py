@@ -30,28 +30,40 @@ def renderPage1():
 def renderPage2():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
-    session["sum"] = request.form["sum"]
+    if not("sum" in session):
+        session["sum"] = request.form["sum"]
+    else:
+        session["sum"] != request.form["sum"]
     return render_template('page2.html')
   
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
-    session["answer"] = request.form["answer"]
+    if not("answer" in session):
+        session["answer"] = request.form["answer"]
+    else:
+        session["answer"] != request.form["answer"]
     return render_template('page3.html')
   
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     #TODO: save the first and last name in the session
     #session["last_name"] = request.form["lastName"]
-    session["total"] = request.form["total"]
+    if not("total" in session):
+        session["total"] = request.form["total"]
+    else:
+        session["total"] != request.form["total"]
     return render_template('page4.html')
 
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
     #TODO: save the favorite color in the session
     #session["favorite_color"] = request.form["favoriteColor"]
-    session["results"] = request.form["results"]
+    if not("results" in session):
+        session["results"] = request.form["results"]
+    else:
+        session["results"] != request.form["results"]
     
     score = 0
     
